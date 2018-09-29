@@ -46,7 +46,17 @@ var convertor= {
                         }
                         break;
                     case 'c':
-                        console.log((5*(medida-32))/9);
+                        
+                        switch (unidadMedi){
+                            case 'k':
+                                console.log(medida-273.15);
+                                break;
+                            case 'f':
+                                console.log(5*(medida-32)/9);
+                                break;
+                            default:
+                                console.log('El tipo de medida no existe');
+                        }
                         break;
                     case 'k':
                         switch (unidadMedi){
@@ -54,7 +64,7 @@ var convertor= {
                                 console.log(((5*(medida-32))/9)+273.5);
                                 break;
                             case 'c':
-                                console.log(medida-273.15)
+                                console.log(medida+273.15)
                                 break;
                             default:
                                 console.log('El tipo de medida no existe');
